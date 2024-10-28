@@ -5,11 +5,22 @@ function App() {
   let [counter,setCounter]=useState(15)
 
   const addValue=()=>{
-    setCounter(counter+1)
+    if(counter<20){
+
+      setCounter(counter+1)
+    }
+    else{
+      alert("Counter cannot exceed 20");
+    }
   }
   const removeValue=()=>{
-    counter=counter-1;
-    setCounter(counter);
+    if(counter>0){
+
+      counter=counter-1;
+      setCounter(counter);
+    }else{
+      alert("Counter cannot go below 0");
+    }
   }
 
 
